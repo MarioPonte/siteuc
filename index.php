@@ -114,6 +114,10 @@
                     <div class="col text-center">
                         <h2 class="titlesec mt-0">Noticias</h2>
 
+                        <div class="newsAdmPanel">
+                            <a href="#" class="newsAdmBtn"><i class="fa-solid fa-plus"></i> Adicionar Noticia</a>
+                        </div>
+
                         <div class="album py-5">
                             <div class="container">
                                 <div class="row">
@@ -122,11 +126,15 @@
                             
                                         <div class="col-md-4">
                                             <div class="card newsCard mb-4 box-shadow">
-                                                <img class="card-img-top" src="https://www.pcgamesn.com/wp-content/uploads/2019/07/WF_Duvri_Screenshot2.jpg" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                                                <img class="card-img-top" src="assets/newsImg/<?php echo $dado["imagem"]; ?>" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Imagem">
                                                 <div class="card-body">
                                                     <p class="card-title"><?php echo $dado["titulo"]; ?></p>
                                                     <p class="card-text"><?php echo $dado["descricao"]; ?></p>
                                                     <p class="card-date"><?php echo date("d/m/Y", strtotime($dado["data"])); ?></p>
+
+                                                    <p class="card-status">
+                                                        <a id="btnEdit" href="#"><i class="fa-solid fa-pen"></i></a><a id="btnDelete" href="excluirNoticia.php?id=<?php echo $dado["id"]; ?>"><i class="fa-solid fa-trash"></i></a>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
