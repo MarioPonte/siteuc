@@ -115,7 +115,7 @@
                         <h2 class="titlesec mt-0">Noticias</h2>
 
                         <div class="newsAdmPanel">
-                            <a href="#" class="newsAdmBtn"><i class="fa-solid fa-plus"></i> Adicionar Noticia</a>
+                            <a href="addNoticia.php" class="newsAdmBtn"><i class="fa-solid fa-plus"></i> Adicionar Noticia</a>
                         </div>
 
                         <div class="album py-5">
