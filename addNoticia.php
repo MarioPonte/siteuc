@@ -39,24 +39,24 @@
   crossorigin="anonymous"></script>
 </head>
 <body class="bg-primary text-center">
-    <h1 class="text-white">Adicionar Noticia</h1>
+    <h1 class="formTitle">Adicionar Noticia</h1>
     <form action="processaNoticia.php" method="POST">
         <div class="form-group">
             <label class="text-white">Titulo</label>
-            <input class="form-control" type="text" name="titulo" placeholder="Titulo da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia...">
         </div>
         <div class="form-group">
             <label class="text-white">Descrição</label>
-            <input class="form-control" type="text" name="descricao" placeholder="Descrição da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia...">
         </div>
         <div class="form-group">
             <label class="text-white">Imagem</label>
-            <input class="form-control" type="text" name="imagem" placeholder="Imagem da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="imagem" placeholder="Imagem da Noticia...">
         </div>
 
-        <input class="btn btn-primary" type="submit" value="Adicionar Noticia">
+        <input class="btnSubmitNews" type="submit" value="Adicionar Noticia">
     </form>
 
-    <a href="index.php#noticias">Voltar</a>
+    <a class="btnBack" href="index.php#noticias">Voltar</a>
 </body>
 </html>
