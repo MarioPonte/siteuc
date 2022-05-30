@@ -4,7 +4,7 @@
 
     // Query de consulta das noticias da base de dados
 
-    $consulta = "SELECT * FROM noticias LIMIT 6";
+    $consulta = "SELECT * FROM noticias ORDER BY data DESC LIMIT 6";
     $con = $mysqli->query($consulta) or die($mysqli->error);
 ?>
 
