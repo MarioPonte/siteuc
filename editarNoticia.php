@@ -1,3 +1,15 @@
+<?php
+
+    include("connect.php");
+
+    $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_NUMBER_INT);
+
+    $consulta = "SELECT * FROM noticias WHERE id='$id'";
+    $resultadoNoticia = mysqli_query($mysqli, $consulta);
+    $rowNoticia = mysqli_fetch_assoc($resultadoNoticia);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,22 +41,26 @@
   crossorigin="anonymous"></script>
 </head>
 <body class="bg-primary text-center">
-    <h1 class="formTitle">Adicionar Noticia</h1>
-    <form enctype="multipart/form-data" action="processaNoticia.php" method="POST">
+    <h1 class="formTitle">Editar Noticia</h1>
+    <form enctype="multipart/form-data" action="proc_edit_noticia.php" method="POST">
+
+        <input class="form-control inputFormStyle" type="hidden" name="id" value="<?php echo $rowNoticia['id']; ?>">
+
         <div class="form-group">
             <label class="text-label">Título</label>
-            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia..." value="<?php echo $rowNoticia['titulo']; ?>">
         </div>
         <div class="form-group">
             <label class="text-label">Descrição</label>
-            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia..." value="<?php echo $rowNoticia['descricao']; ?>">
         </div>
         <div class="form-group">
             <label class="text-label">Imagem</label>
             <input class="form-control inputFormStyle" type="file" name="imagem" placeholder="Imagem da Noticia...">
+            <input class="form-control inputFormStyle" type="hidden" name="imagemVelha" value="<?php echo $rowNoticia['imagem']; ?>">
         </div>
 
-        <input class="btnSubmitNews" type="submit" value="Adicionar Noticia">
+        <input class="btnSubmitNews" type="submit" value="Editar Noticia">
     </form>
 
     <a class="btnBack" href="index.php#noticias">Voltar</a>

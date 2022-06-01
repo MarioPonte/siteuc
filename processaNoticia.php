@@ -33,13 +33,7 @@
 
         $path = $novoNomeDaImagem . "." . $extensao;
 
-        $deuCerto = move_uploaded_file($imagem["tmp_name"], $pasta . $path);
-
-        if($deuCerto){
-            //echo "<p>arquivo enviado</p>";
-        }else{
-            echo "<p>arquivo não enviado</p>";
-        }
+        move_uploaded_file($imagem["tmp_name"], $pasta . $path);
     }
 
 

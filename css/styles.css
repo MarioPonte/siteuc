@@ -259,13 +259,9 @@
 .newsCard{
   display: inline-block !important;
   margin: 10px !important;
-  border-radius: 0px !important;
+  border-radius: 0px 0px 8px 8px !important;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.newsCard{
-  display: inline-block;
 }
 
 .card-title{
@@ -354,6 +350,12 @@
 .form-group{
   width: 800px;
   margin: auto;
+}
+
+.text-label{
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 950px) {

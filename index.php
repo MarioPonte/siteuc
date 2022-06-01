@@ -133,7 +133,7 @@
                                                     <p class="card-date"><?php echo date("d/m/Y", strtotime($dado["data"])); ?></p>
 
                                                     <p class="card-status">
-                                                        <a id="btnEdit" href="#"><i class="fa-solid fa-pen"></i></a><a id="btnDelete" href="javascript: if(confirm('Tem certeza que deseja apagar esta noticia?')) location.href='excluirNoticia.php?id=<?php echo $dado["id"]; ?>';"><i class="fa-solid fa-trash"></i></a>
+                                                        <a id="btnEdit" href="editarNoticia.php?id=<?php echo $dado["id"]; ?>"><i class="fa-solid fa-pen"></i></a><a id="btnDelete" href="javascript: if(confirm('Tem certeza que deseja apagar esta noticia?')) location.href='excluirNoticia.php?id=<?php echo $dado["id"]; ?>';"><i class="fa-solid fa-trash"></i></a>
                                                     </p>
                                                 </div>
                                             </div>
