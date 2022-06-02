@@ -34,6 +34,7 @@
 
             $editarImagem = $novoNomeDaImagem . "." . $extensao;
 
+            unlink("assets/newsImg/" . $_POST['imagemVelha']);
             move_uploaded_file($imagem["tmp_name"], $pasta . $editarImagem);
         }
     }else{

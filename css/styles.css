@@ -358,6 +358,34 @@
   font-size: 18px;
 }
 
+.loginTitle{
+  font-family: 'ucfont';
+  text-transform: uppercase;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #301D7C, #2500b9);
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #301D7C, #2500b9);
+  }
+  
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+}
+
 @media only screen and (max-width: 950px) {
 
   .formTitle{
@@ -3817,11 +3845,26 @@ textarea.form-control-lg {
   color: #dc3545;
   border-color: #dc3545;
 }
+
 .btn-outline-danger:hover {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
+
+.btn-outline-blue {
+  color: #301D7C;
+  border: 2px solid #301D7C;
+  border-radius: 100vw;
+  font-family: 'ucfont' !important;
+}
+
+.btn-outline-blue:hover {
+  color: #fff;
+  background-color: #301D7C;
+  border: 2px solid #301D7C;
+}
+
 .btn-check:focus + .btn-outline-danger, .btn-outline-danger:focus {
   box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);
 }

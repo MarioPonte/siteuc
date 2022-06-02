@@ -101,7 +101,7 @@
                                 <img class="top-img" src="assets/clansLogos/tlColor.png" alt="" srcset="">
                             </div>
                         </div>
-                        <a class="btn btnMore" href="#comunidade"><i class="fa-solid fa-chevron-down"></i></a>
+                        <a class="btn btnMore" href="#noticias"><i class="fa-solid fa-chevron-down"></i></a>
                     </div>
                 </div>
             </div>
