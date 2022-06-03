@@ -255,7 +255,7 @@
 
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="socialmedia text-white">
+            <div class="socialmediaLogin text-white">
                 <div class="socialm"><a href="https://www.facebook.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-facebook"></i></a></div>
                 <div class="socialm"><a href="https://www.instagram.com/uniaocosmicabr/" target="_blank"><i class="socialmediaLogo fa-brands fa-instagram"></i></a></div>
                 <div class="socialm"><a href="https://twitter.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-twitter"></i></a></div>

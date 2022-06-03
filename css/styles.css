@@ -363,9 +363,44 @@
   text-transform: uppercase;
 }
 
+.accText{
+  font-family: 'ucfont';
+}
+
+#formUC{
+  border-radius: 100vw;
+  font-family: 'ucfont';
+}
+
+#formUC:focus{
+  border-color: #301D7C;
+}
+
+.formLbl{
+  font-family: 'ucfont';
+}
+
+.btnLogin{
+  padding: 18px 40px 18px 40px !important;
+  border-radius: 100vw !important;
+  font-family: 'ucfont' !important;
+}
+
+.loginTextTitle{
+  font-family: 'ucfont';
+}
+
+.loginTextDescription{
+  font-family: 'ucfont';
+}
+
+.notHaveAcc{
+  font-family: 'ucfont';
+}
+
 .gradient-custom-2 {
   /* fallback for old browsers */
-  background: #fccb90;
+  background: #301D7C;
   
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right, #301D7C, #2500b9);

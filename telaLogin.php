@@ -45,26 +45,24 @@
                 </div>
 
                 <form>
-                  <p>Por favor entre com a sua conta</p>
+                  <p class="accText">Por favor entre com a sua conta</p>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control" />
-                    <label class="form-label" for="form2Example11">Nome de usuário</label>
+                    <input type="text" id="formUC" class="form-control" />
+                    <label class="form-label formLbl">Usuário</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" />
-                    <label class="form-label" for="form2Example22">Senha</label>
+                    <input type="password" id="formUC" class="form-control" />
+                    <label class="form-label formLbl">Senha</label>
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                      in</button>
-                    <a class="text-muted" href="#!">Forgot password?</a>
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btnLogin" type="button">Login</button>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2">Não tem uma conta?</p>
+                    <p class="mb-0 me-2 notHaveAcc">Não tem uma conta?</p>
                     <button type="button" class="btn btn-outline-blue">Crie agora</button>
                   </div>
 
@@ -74,10 +72,15 @@
             </div>
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">We are more than just a company</h4>
-                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h4 class="mb-4 loginTextTitle">Divirta-se conosco!</h4>
+                <p class="small mb-0 loginTextDescription">Fique ligado em todas as atividades e noticias da nossa comunidade.</p>
+                <div class="socialmedia text-white">
+                    <div class="socialm"><a href="https://discord.com/invite/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-discord"></i></a></div>
+                    <div class="socialm"><a href="https://www.facebook.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-facebook"></i></a></div>
+                    <div class="socialm"><a href="https://www.instagram.com/uniaocosmicabr/" target="_blank"><i class="socialmediaLogo fa-brands fa-instagram"></i></a></div>
+                    <div class="socialm"><a href="https://twitter.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-twitter"></i></a></div>
+                    <div class="socialm"><a href="https://www.youtube.com/channel/UCLlQi5BS8wEew2qok_L6UmA" target="_blank"><i class="socialmediaLogo fa-brands fa-youtube"></i></a></div>
+                </div>
               </div>
             </div>
           </div>
