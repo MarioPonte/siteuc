@@ -1,10 +1,22 @@
+<?php
+    if(isset($_POST['email'])){
+        include('connect.php');
+
+        $nome = $_POST['nome'];
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+        $email = $_POST['email'];
+
+        $mysqli->query("INSERT INTO usuarios (nome, senha, email) VALUES ('$nome', '$senha', '$email')");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <!-- Favicon-->
     <link rel="shortcut icon" href="assets/ucico.png" type="image/x-icon">
     <!-- Font Awesome icons (free version)-->
@@ -35,8 +47,7 @@
       <div class="col-xl-10">
         <div class="card rounded-lg text-black">
           <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
+              <div class="card-body">
 
                 <div class="text-center">
                   <img src="assets/clansLogos/ucColor.png"
@@ -44,8 +55,8 @@
                   <h4 class="loginTitle mt-1 mb-5 pb-1">União Cósmica</h4>
                 </div>
 
-                <form action="testLogin.php" method="post">
-                  <p class="accText">Por favor entre com a sua conta</p>
+                <form action="" method="post">
+                  <p class="accText">Por favor insira os dados da conta</p>
 
                   <div class="form-outline mb-4">
                     <input type="text" name="nome" id="formUC" class="form-control" />
@@ -57,32 +68,22 @@
                     <label class="form-label formLbl">Senha</label>
                   </div>
 
+                  <div class="form-outline mb-4">
+                    <input type="email" name="email" id="formUC" class="form-control" />
+                    <label class="form-label formLbl">Email</label>
+                  </div>
+
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btnLogin" type="submit">Login</button>
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btnLogin" type="submit">Cadastrar</button>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2 notHaveAcc">Não tem uma conta?</p>
-                    <a type="button" href="telaCadastro.php" class="btn btn-outline-blue">Crie agora</a>
+                    <a type="button" href="telaLogin.php" class="btn btn-outline-blue">Voltar</a>
                   </div>
 
                 </form>
 
               </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4 loginTextTitle">Divirta-se conosco!</h4>
-                <p class="small mb-0 loginTextDescription">Fique ligado em todas as atividades e noticias da nossa comunidade.</p>
-                <div class="socialmedia text-white">
-                    <div class="socialm"><a href="https://discord.com/invite/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-discord"></i></a></div>
-                    <div class="socialm"><a href="https://www.facebook.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-facebook"></i></a></div>
-                    <div class="socialm"><a href="https://www.instagram.com/uniaocosmicabr/" target="_blank"><i class="socialmediaLogo fa-brands fa-instagram"></i></a></div>
-                    <div class="socialm"><a href="https://twitter.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-twitter"></i></a></div>
-                    <div class="socialm"><a href="https://www.youtube.com/channel/UCLlQi5BS8wEew2qok_L6UmA" target="_blank"><i class="socialmediaLogo fa-brands fa-youtube"></i></a></div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
