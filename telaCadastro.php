@@ -39,6 +39,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  
 </head>
 <body class="text-center" style="background-color: #24133B;">
 <section class="h-100 gradient-form">
@@ -51,11 +52,11 @@
 
                 <div class="text-center">
                   <img src="assets/clansLogos/ucColor.png"
-                    style="width: 185px;" alt="logo">
+                    style="width: 115px;" alt="logo">
                   <h4 class="loginTitle mt-1 mb-5 pb-1">União Cósmica</h4>
                 </div>
 
-                <form action="" method="post">
+                <form name="formCad" action="" method="post">
                   <p class="accText">Por favor insira os dados da conta</p>
 
                   <div class="form-outline mb-4">
@@ -69,12 +70,17 @@
                   </div>
 
                   <div class="form-outline mb-4">
+                    <input type="password" name="repSenha" id="formUC" class="form-control" />
+                    <label class="form-label formLbl">Confirme a Senha</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
                     <input type="email" name="email" id="formUC" class="form-control" />
                     <label class="form-label formLbl">Email</label>
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btnLogin" type="submit">Cadastrar</button>
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btnLogin" type="submit" onclick="return validarSenha()">Cadastrar</button>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
@@ -90,5 +96,7 @@
     </div>
   </div>
 </section>
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

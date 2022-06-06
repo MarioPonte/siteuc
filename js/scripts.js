@@ -11,6 +11,30 @@
 // My scripts
 
 
+function validarSenha(){
+    var senha = formCad.senha.value;
+    var repSenha = formCad.repSenha.value;
+
+    if(senha=="" || senha.length < 6){
+      alert("Prencha o campo senha com no minimo 6 caracteres.");
+      formCad.senha.focus();
+      return false;
+    }
+
+    if(repSenha=="" || repSenha.length < 6){
+      alert("Prencha o campo senha com no minimo 6 caracteres.");
+      formCad.repSenha.focus();
+      return false;
+    }
+
+    if(senha != repSenha){
+      alert("Senhas diferentes, volte a inserir");
+      formCad.senha.focus();
+      return false;
+    }
+  }
+
+
 function loading(){
     document.getElementsByClassName("box-load")[0].style.display = "none";
     document.getElementsByClassName("contentPage")[0].style.display = "block";

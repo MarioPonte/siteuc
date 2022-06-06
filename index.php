@@ -67,6 +67,7 @@
                         <li class="nav-item"><a class="nav-link" href="#comunidade">Comunidade</a></li>
                         <li class="nav-item"><a class="nav-link" href="#membros">Membros</a></li>
                         <li class="nav-item"><a class="nav-link" href="#discord"><i class="fa-brands fa-discord"></i> Discord</a></li>
+                        <li class="nav-item"><a class="nav-link" href="telaLogin.php">Login</a></li>
                     </ul>
                 </div>
             </div>
