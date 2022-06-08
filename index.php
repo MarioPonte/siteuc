@@ -6,6 +6,8 @@
 
     $consulta = "SELECT * FROM noticias ORDER BY data DESC LIMIT 6";
     $con = $mysqli->query($consulta) or die($mysqli->error);
+
+    include("protect.php");
 ?>
 
 <!DOCTYPE html>

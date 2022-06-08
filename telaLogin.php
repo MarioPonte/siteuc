@@ -1,3 +1,44 @@
+<?php
+    include('connect.php');
+
+    if(isset($_POST['nome']) || isset($_POST['senha'])){
+      if(strlen($_POST['nome']) == 0){
+        echo "Prencha o Nickname";
+      }else if(strlen($_POST['senha']) == 0){
+        echo "Prencha a Senha";
+      }else{
+        $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
+
+        $sql_code = "SELECT * FROM usuarios WHERE nome = '$nome' LIMIT 1";
+        $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1){
+          $usuario = $sql_query->fetch_assoc();
+
+          
+
+          if(password_verify($senha, $usuario['senha'])){
+            if(!isset($_SESSION)){
+              session_start();
+            }
+  
+            $_SESSION['user'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['nome'];
+
+            header("Location: loginTest.php");
+          }else{
+            echo "Falha ao logar";
+          }
+        }else{
+          echo "Falha ao logar";
+        }
+      }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +85,7 @@
                   <h4 class="loginTitle mt-1 mb-5 pb-1">União Cósmica</h4>
                 </div>
 
-                <form action="testLogin.php" method="post">
+                <form action="" method="POST">
                   <p class="accText">Por favor entre com a sua conta</p>
 
                   <div class="form-outline mb-4">
