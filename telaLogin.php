@@ -28,7 +28,7 @@
             $_SESSION['user'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: loginTest.php");
+            header("Location: index.php");
           }else{
             echo "Falha ao logar";
           }
@@ -115,13 +115,14 @@
               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                 <h4 class="mb-4 loginTextTitle">Divirta-se conosco!</h4>
                 <p class="small mb-0 loginTextDescription">Fique ligado em todas as atividades e noticias da nossa comunidade.</p>
-                <div class="socialmedia text-white">
+                <div class="socialmediaLogin text-white">
                     <div class="socialm"><a href="https://discord.com/invite/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-discord"></i></a></div>
                     <div class="socialm"><a href="https://www.facebook.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-facebook"></i></a></div>
-                    <div class="socialm"><a href="https://www.instagram.com/uniaocosmicabr/" target="_blank"><i class="socialmediaLogo fa-brands fa-instagram"></i></a></div>
+                    <div class="socialm"><a href="https://www.instagram.com/uniaocosmica/" target="_blank"><i class="socialmediaLogo fa-brands fa-instagram"></i></a></div>
                     <div class="socialm"><a href="https://twitter.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-twitter"></i></a></div>
                     <div class="socialm"><a href="https://www.youtube.com/channel/UCLlQi5BS8wEew2qok_L6UmA" target="_blank"><i class="socialmediaLogo fa-brands fa-youtube"></i></a></div>
                 </div>
+                <a class="backToSiteBtn" href="index.php">Voltar</a>
               </div>
             </div>
           </div>

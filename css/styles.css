@@ -220,6 +220,11 @@
   font-size: 26px;
 }
 
+.socialmediaLogin{
+  margin-top: 20px;
+  font-size: 24px;
+}
+
 .titlesec{
   color:white;
   font-size: 48px;
@@ -396,6 +401,39 @@
 
 .notHaveAcc{
   font-family: 'ucfont';
+}
+
+.loginBtn{
+  font-family: 'ucfont';
+  background-color: #6943ff;
+  padding: 10px 28px 10px 28px;
+  border-radius: 100vw;
+  transition: 0.25s;
+}
+
+.loginBtn:hover{
+  background-color: #4826d1;
+}
+
+.profileBtn{
+  font-family: 'ucfont';
+  background-color: #6943ff;
+  padding: 10px 26px 10px 26px;
+  border-radius: 100vw;
+  transition: 0.25s;
+}
+
+.profileBtn:hover{
+  background-color: #4826d1;
+}
+
+.profileBtn:focus{
+  background-color: #4826d1;
+}
+
+.backToSiteBtn{
+  font-family: 'ucfont';
+  padding: 20px;
 }
 
 .gradient-custom-2 {
@@ -4263,12 +4301,13 @@ textarea.form-control-lg {
   padding: 0.25rem 1rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #aaa;
   text-align: inherit;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border: 0;
+  font-family: 'ucfont';
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #1e2125;

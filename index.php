@@ -8,6 +8,7 @@
     $con = $mysqli->query($consulta) or die($mysqli->error);
 
     include("protect.php");
+    
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +70,18 @@
                         <li class="nav-item"><a class="nav-link" href="#comunidade">Comunidade</a></li>
                         <li class="nav-item"><a class="nav-link" href="#membros">Membros</a></li>
                         <li class="nav-item"><a class="nav-link" href="#discord"><i class="fa-brands fa-discord"></i> Discord</a></li>
-                        <li class="nav-item"><a class="nav-link" href="telaLogin.php">Login</a></li>
+
+
+                        <?php if(!isset($_SESSION['user'])){ ?>
+                            <li class="nav-item"><a class="loginBtn" href="telaLogin.php">Login</a></li>
+                        <?php }else{ ?>
+                            <li class="nav-item dropdown">
+                                <a class="profileBtn dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user"></i> <?php echo $_SESSION['nome']; ?></a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="logout.php">Logout</a>
+                                </div>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -248,7 +260,7 @@
                     </div>
                 </div>
                 <div class="btnDiscordDiv">
-                    <a class="btnDiscord" href="https://discord.com/invite/uniaocosmicabr" target="_blank"><i class="fa-brands fa-discord"></i> Entre agora mesmo</a>
+                    <a class="btnDiscord" href="https://discord.com/invite/uniaocosmica" target="_blank"><i class="fa-brands fa-discord"></i> Entre agora mesmo</a>
                 </div>
             </div>
         </section>
@@ -258,7 +270,7 @@
 
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="socialmediaLogin text-white">
+            <div class="socialmedia text-white">
                 <div class="socialm"><a href="https://www.facebook.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-facebook"></i></a></div>
                 <div class="socialm"><a href="https://www.instagram.com/uniaocosmicabr/" target="_blank"><i class="socialmediaLogo fa-brands fa-instagram"></i></a></div>
                 <div class="socialm"><a href="https://twitter.com/uniaocosmicabr" target="_blank"><i class="socialmediaLogo fa-brands fa-twitter"></i></a></div>
@@ -280,6 +292,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
