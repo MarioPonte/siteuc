@@ -129,9 +129,15 @@
                     <div class="col text-center">
                         <h2 class="titlesec mt-0">Noticias</h2>
 
-                        <div class="newsAdmPanel">
-                            <a href="addNoticia.php" class="newsAdmBtn"><i class="fa-solid fa-plus"></i> Adicionar Noticia</a>
-                        </div>
+                        <?php if(isset($_SESSION['cargo'])){ ?>
+
+                            <?php if($_SESSION['cargo'] == 'administrador'){ ?>
+                                <div class="newsAdmPanel">
+                                    <a href="addNoticia.php" class="newsAdmBtn"><i class="fa-solid fa-plus"></i> Adicionar Noticia</a>
+                                </div>
+                            <?php } ?>
+
+                        <?php } ?>
 
                         <div class="album py-5">
                             <div class="container">
@@ -147,9 +153,13 @@
                                                     <p class="card-text"><?php echo $dado["descricao"]; ?></p>
                                                     <p class="card-date"><?php echo date("d/m/Y", strtotime($dado["data"])); ?></p>
 
-                                                    <p class="card-status">
-                                                        <a id="btnEdit" href="editarNoticia.php?id=<?php echo $dado["id"]; ?>"><i class="fa-solid fa-pen"></i></a><a id="btnDelete" href="javascript: if(confirm('Tem certeza que deseja apagar esta noticia?')) location.href='excluirNoticia.php?id=<?php echo $dado["id"]; ?>';"><i class="fa-solid fa-trash"></i></a>
-                                                    </p>
+                                                    <?php if(isset($_SESSION['cargo'])){ ?>
+                                                        <?php if($_SESSION['cargo'] == 'administrador'){ ?>
+                                                            <p class="card-status">
+                                                                <a id="btnEdit" href="editarNoticia.php?id=<?php echo $dado["id"]; ?>"><i class="fa-solid fa-pen"></i></a><a id="btnDelete" href="javascript: if(confirm('Tem certeza que deseja apagar esta noticia?')) location.href='excluirNoticia.php?id=<?php echo $dado["id"]; ?>';"><i class="fa-solid fa-trash"></i></a>
+                                                            </p>
+                                                        <?php } ?>
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
