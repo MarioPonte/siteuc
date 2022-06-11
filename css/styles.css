@@ -381,6 +381,16 @@
   border-color: #301D7C;
 }
 
+#inputSenha{
+  border-radius: 100vw;
+  font-family: 'ucfont';
+  padding-right: 44px;
+}
+
+#inputSenha:focus{
+  border-color: #301D7C;
+}
+
 .formLbl{
   font-family: 'ucfont';
 }
@@ -434,6 +444,19 @@
 .backToSiteBtn{
   font-family: 'ucfont';
   padding: 20px;
+}
+
+#showBtn{
+  cursor: pointer;
+  margin-left: -40px;
+  background-color: transparent;
+  border: none;
+  opacity: .5;
+}
+
+.divPassword{
+  display: flex;
+  align-items: center;
 }
 
 .gradient-custom-2 {

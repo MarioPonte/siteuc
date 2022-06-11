@@ -65,12 +65,18 @@
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" name="senha" id="formUC" class="form-control" />
+                    <div class="divPassword">
+                      <input id="inputSenha" type="password" name="senha" class="form-control" />
+                      <button type="button" id="showBtn" onclick="eyeClick()"><i class="fa-solid fa-eye"></i></button>
+                    </div>
                     <label class="form-label formLbl">Senha</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" name="repSenha" id="formUC" class="form-control" />
+                    <div class="divPassword">
+                      <input id="inputSenhaRpt" type="password" name="repSenha" class="form-control" />
+                      <button type="button" id="showBtnRpt" onclick="eyeClickRpt()"><i class="fa-solid fa-eye"></i></button>
+                    </div>
                     <label class="form-label formLbl">Confirme a Senha</label>
                   </div>
 

@@ -10,6 +10,20 @@
 
 // My scripts
 
+const passwordInput = document.getElementById('inputSenha');
+const eye = document.getElementById('showBtn');
+
+function eyeClick(){
+    let inputTypeIsPassword = passwordInput.type == "password";
+    if(inputTypeIsPassword){
+        passwordInput.setAttribute("type", "text");
+        eye.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+    }else{
+        passwordInput.setAttribute("type", "password");
+        eye.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    }
+}
+
 
 function validarSenha(){
     var senha = formCad.senha.value;
