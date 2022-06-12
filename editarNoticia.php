@@ -44,15 +44,15 @@
     <h1 class="formTitle">Editar Noticia</h1>
     <form enctype="multipart/form-data" action="proc_edit_noticia.php" method="POST">
 
-        <input class="form-control inputFormStyle" type="hidden" name="id" value="<?php echo $rowNoticia['id']; ?>">
+        <input class="form-control inputFormStyle" type="hidden" name="id" value="<?php echo $rowNoticia['id']; ?>" required>
 
         <div class="form-group">
             <label class="text-label">Título</label>
-            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia..." value="<?php echo $rowNoticia['titulo']; ?>">
+            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia..." value="<?php echo $rowNoticia['titulo']; ?>" required>
         </div>
         <div class="form-group">
             <label class="text-label">Descrição</label>
-            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia..." value="<?php echo $rowNoticia['descricao']; ?>">
+            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia..." value="<?php echo $rowNoticia['descricao']; ?>" required>
         </div>
         <div class="form-group">
             <label class="text-label">Imagem</label>

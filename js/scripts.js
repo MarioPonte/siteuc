@@ -25,6 +25,21 @@ function eyeClick(){
 }
 
 
+const passwordInputRpt = document.getElementById('inputSenhaRpt');
+const eyeRpt = document.getElementById('showBtnRpt');
+
+function eyeClickRpt(){
+    let inputTypeIsPassword = passwordInputRpt.type == "password";
+    if(inputTypeIsPassword){
+        passwordInputRpt.setAttribute("type", "text");
+        eyeRpt.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+    }else{
+        passwordInputRpt.setAttribute("type", "password");
+        eyeRpt.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    }
+}
+
+
 function validarSenha(){
     var senha = formCad.senha.value;
     var repSenha = formCad.repSenha.value;

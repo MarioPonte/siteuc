@@ -391,6 +391,16 @@
   border-color: #301D7C;
 }
 
+#inputSenhaRpt{
+  border-radius: 100vw;
+  font-family: 'ucfont';
+  padding-right: 44px;
+}
+
+#inputSenhaRpt:focus{
+  border-color: #301D7C;
+}
+
 .formLbl{
   font-family: 'ucfont';
 }
@@ -454,9 +464,21 @@
   opacity: .5;
 }
 
+#showBtnRpt{
+  cursor: pointer;
+  margin-left: -40px;
+  background-color: transparent;
+  border: none;
+  opacity: .5;
+}
+
 .divPassword{
   display: flex;
   align-items: center;
+}
+
+.loginFailed{
+  font-family: 'ucfont' !important;
 }
 
 .gradient-custom-2 {

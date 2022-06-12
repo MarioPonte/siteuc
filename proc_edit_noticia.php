@@ -47,6 +47,7 @@
     if(mysqli_affected_rows($mysqli)){
         header("Location: index.php#noticias");
     }else{
+        header("Location: index.php#noticias");
     }
 
 ?>

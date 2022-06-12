@@ -2,11 +2,6 @@
     include('connect.php');
 
     if(isset($_POST['nome']) || isset($_POST['senha'])){
-      if(strlen($_POST['nome']) == 0){
-        echo "Prencha o Nickname";
-      }else if(strlen($_POST['senha']) == 0){
-        echo "Prencha a Senha";
-      }else{
         $nome = $_POST['nome'];
         $senha = $_POST['senha'];
 
@@ -31,12 +26,11 @@
 
             header("Location: index.php");
           }else{
-            echo "Falha ao logar";
+            echo "<div class='alert alert-danger' role='alert'>Falha ao logar</div>";
           }
         }else{
-          echo "Falha ao logar";
+          echo "<div class='alert-danger loginFailed' role='alert'>Falha ao logar</div>";
         }
-      }
     }
 ?>
 
@@ -90,13 +84,13 @@
                   <p class="accText">Por favor entre com a sua conta</p>
 
                   <div class="form-outline mb-4">
-                    <input type="text" name="nome" id="formUC" class="form-control" />
+                    <input type="text" name="nome" id="formUC" class="form-control" required />
                     <label class="form-label formLbl">Usuário</label>
                   </div>
 
                   <div class="form-outline mb-4">
                     <div class="divPassword">
-                      <input id="inputSenha" type="password" name="senha" class="form-control" />
+                      <input id="inputSenha" type="password" name="senha" class="form-control" required />
                       <button type="button" id="showBtn" onclick="eyeClick()"><i class="fa-solid fa-eye"></i></button>
                     </div>
                     <label class="form-label formLbl">Senha</label>

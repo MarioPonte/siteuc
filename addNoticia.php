@@ -33,15 +33,15 @@
     <form enctype="multipart/form-data" action="processaNoticia.php" method="POST">
         <div class="form-group">
             <label class="text-label">Título</label>
-            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="titulo" placeholder="Titulo da Noticia..." required>
         </div>
         <div class="form-group">
             <label class="text-label">Descrição</label>
-            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia...">
+            <input class="form-control inputFormStyle" type="text" name="descricao" placeholder="Descrição da Noticia..." required>
         </div>
         <div class="form-group">
             <label class="text-label">Imagem</label>
-            <input class="form-control inputFormStyle" type="file" name="imagem" placeholder="Imagem da Noticia...">
+            <input class="form-control inputFormStyle" type="file" name="imagem" placeholder="Imagem da Noticia..." required>
         </div>
 
         <input class="btnSubmitNews" type="submit" value="Adicionar Noticia">
