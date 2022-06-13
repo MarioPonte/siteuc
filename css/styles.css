@@ -286,7 +286,7 @@
 }
 
 #btnEdit, #btnDelete{
-  color: #301D7C !important;
+  color: #24133B !important;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -4355,8 +4355,7 @@ textarea.form-control-lg {
   font-family: 'ucfont';
 }
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #1e2125;
-  background-color: #e9ecef;
+  color: #6943ff;
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #140A21;
